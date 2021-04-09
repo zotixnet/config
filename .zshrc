@@ -1,6 +1,7 @@
 source ~/.zsh/git-prompt.zsh/git-prompt.zsh
 
-local hostname="%{$fg_bold[black]%}%m"
+#[[ $SSH_CONNECTION ]] && local hostname="%{$fg_bold[black]%}%m"
+[[ $SSH_CONNECTION ]] && local uath='%F{2}%n@%M%f '
 
 ZSH_GIT_PROMPT_SHOW_UPSTREAM="no"
 
@@ -21,7 +22,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
 ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[blue]%}⚑"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 
-PROMPT='${hostname} %F{39}%1~%f $(gitprompt)%# '
+PROMPT='${uath}%F{39}%1~%f $(gitprompt)%# '
 #PROMPT+='%(?.%(!.%F{white}❯%F{yellow}❯%F{red}.%F{blue}❯%F{cyan}❯%F{green})❯%f.%F{red}❯❯❯%f) '
 RPROMPT=''
 
