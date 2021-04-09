@@ -1,5 +1,7 @@
 source ~/.zsh/git-prompt.zsh/git-prompt.zsh
 
+local hostname="%{$fg_bold[black]%}%m"
+
 ZSH_GIT_PROMPT_SHOW_UPSTREAM="no"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="["
@@ -19,7 +21,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
 ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[blue]%}⚑"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 
-PROMPT='%F{39}%1~%f $(gitprompt)%# '
+PROMPT='${hostname} %F{39}%1~%f $(gitprompt)%# '
 #PROMPT+='%(?.%(!.%F{white}❯%F{yellow}❯%F{red}.%F{blue}❯%F{cyan}❯%F{green})❯%f.%F{red}❯❯❯%f) '
 RPROMPT=''
 
