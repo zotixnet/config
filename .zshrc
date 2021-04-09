@@ -1,7 +1,5 @@
 source ~/.zsh/git-prompt.zsh/git-prompt.zsh
 
-#[[ $SSH_CONNECTION ]] && local hostname="%{$fg_bold[black]%}%m"
-#[[ $SSH_CONNECTION ]] && local uath='%F{2}%n@%M%f '
 [[ $SSH_CONNECTION ]] && local uath="%{$fg_bold[black]%}%m "
 
 ZSH_GIT_PROMPT_SHOW_UPSTREAM="no"
